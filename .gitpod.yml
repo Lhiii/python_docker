@@ -6,7 +6,7 @@ tasks:
   
   - name: "Install Ubuntu Packages"
     command: |
-      cd /etc/
+      cd /etc/apt
       sudo sed -i "s/archive.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list
       sudo apt-get update
       sudo apt-get install -y mysql-client vim iputils-ping net-tools
