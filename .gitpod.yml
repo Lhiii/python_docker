@@ -6,8 +6,10 @@ tasks:
   
   - name: "Install Ubuntu Packages"
     command: |
+      cd /etc/apt
+      sudo sed -i "s/archive.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list
       sudo apt-get update
-      sudo apt-get install -y mysql-client vim ip-utils-ping net-tools
+      sudo apt-get install -y mysql-client vim iputils-ping net-tools
 
 
 # # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
